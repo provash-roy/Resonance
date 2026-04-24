@@ -1,16 +1,11 @@
-import AppSidebar from "@/features/dashboard/components/dashboard-sidebar";
-import {
-  SidebarInset,
-  SidebarProvider,
-  SidebarTrigger,
-} from "@/components/ui/sidebar";
+import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
+import DashboardSidebar from "@/features/dashboard/components/dashboard-sidebar";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <SidebarProvider>
-      <AppSidebar />
+      <DashboardSidebar />
       <SidebarInset>
-        <SidebarTrigger />
         <main>{children}</main>
       </SidebarInset>
     </SidebarProvider>

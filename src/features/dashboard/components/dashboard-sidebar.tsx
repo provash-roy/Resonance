@@ -7,6 +7,7 @@ import {
   SidebarHeader,
   SidebarMenu,
   SidebarMenuItem,
+  SidebarTrigger,
 } from "@/components/ui/sidebar";
 
 import { OrganizationSwitcher, UserButton } from "@clerk/nextjs";
@@ -66,9 +67,12 @@ const othersMenuItems: MenuItem[] = [
 
 export default function DashboardSidebar() {
   return (
-    <Sidebar collapsible="icon">
+    <Sidebar  collapsible="icon">
       <SidebarHeader>
-        <span>Resonance</span>
+        <div className="flex justify-between items-center">
+          <span>Resonance</span>
+          <SidebarTrigger />
+        </div>
         <SidebarMenu>
           <SidebarMenuItem>
             <OrganizationSwitcher
